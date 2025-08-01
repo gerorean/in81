@@ -1,0 +1,105 @@
+Pendientes
+
+
+ojo con  f0124(ini)
+
+
+
+0124 y 0138, repeti 2 cambios, hacen lo mismo??? wSug no se corre en 138 y si corre en 124, 124 y 138 tienen varios elementos similares
+se pueden unir estas dos funciones???? tarea: investigar!!!
+
+OJO no me esta tomando la ruta #/1 directa desde el navegador
+
+
+						wPAPA2[1] = wPAPA1[0];
+
+            ......
+
+						ff = 2;
+						//ff = 1;
+
+
+
+Pendiente!!! la const rutas = cuando se automatice debe poder crear en todas que tengan hijos las rutas la ruta 1 como hijo/padre,
+el 1 es un indicador de que esa "ruta" tiene "hermanos" en ese nivel
+
+
+2025
+Adicionar opcion de ruta 0 con un icono que impida desplegar los hijos de esa ruta, ver ejemplo:
+[icono: Tigeras] Sin lugar 1-9i, cambiar
+
+o que en colombia, el departamento 0 sea el icono por ejemplo 'i' que idique que no le interesan
+ la division por departamento sino ver que publico el presidente o los ministros de Colombia
+para ello hay que trabajar en la ruta 2 y tener cuidado con las siguientes funciones, variables o datos:
+gRuta<2>
+hh7
+hh100
+hh101
+mIr002A,B,Z   (*)
+f0012   (*)  carga el html definitivo que va a salir publicado, lo toma de mIr002A dependiendo de lo que diga visOK
+f0030
+f0057
+
+f0107   (*)  
+
+f0121
+f0122
+f0125    (*)   Esta parece ser la función clave de todo para generar el cambio que se necesita de la ruta 0 o el corte de las rutas
+(*)son funciones/variables importantes que afectan la ruta 2
+
+hh102(rev)//CAMBIAR de lugar 0 sitio(0-9) CONTINENTES wMAPA1 por click - se deben recalcular las listas 2-10 (wMAPA)
+
+
+trabajar en hh103(rev) hasta lograr que colombia y argentina permitan conmutar con "sin dividir el territorio" y mostrarlo
+
+9269 indef
+vPAPA1
+wPAPA1
+f0124(ini)  (*)   //ACTUALIZAR tablas siguientes a wPAPAx (ini = x-1) de extensiones a partir de la lista/columna(ini)[0-8] que cambio de valor, si no existen tablas las deja vacias y oculta los botones respectivos de los sitios 
+
+
+conectar el celu por USB
+ajustes equipo/sistema depuracion 7clics
+ajustes equipo/sistema herramientas desarrollo
+chrome://inspect/#devices
+
+reemplazar
+let x var
+a()=> x function a()
+
+trabajar en el reemplazo de max
+
+
+
+en css:
+var, max, calc, , ni vh/vw por valores fijos
+ejemplo:
+.cCel0 {
+  height: calc(100vh - 0.5vh - max(var(--z), 5vh) - var(--kdot));
+}
+
+js:
+<script>
+  function ajustarAlturaCelular() {
+    const z = 40;       // valor fijo o dinámico que vos definas
+    const kdot = 10;    // idem
+
+    const vh = window.innerHeight;
+    const altura = vh - 0.5 * vh - Math.max(z, 0.05 * vh) - kdot;
+
+    // Aplicar al elemento
+    const cel0 = document.querySelector('.cCel0');
+    if (cel0) {
+      cel0.style.height = altura + 'px';
+    }
+  }
+
+  // Ejecutar al cargar
+  window.addEventListener('load', ajustarAlturaCelular);
+
+  // Y también cuando se redimensione la pantalla (opcional)
+  window.addEventListener('resize', ajustarAlturaCelular);
+</script>
+
+
+
